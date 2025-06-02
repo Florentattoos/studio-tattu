@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Web de Tattoos</title>
+
+  <!-- Fuente gótica -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CABECERA -->
+  <header>
+    <h1>Estudio by floren.n </h1>
+    <p>Hola estos son algunos diseños que quiero tatuar, tu puedes elegir uno o interactuar conmigo por alguna idea tuya</p>
+  </header>
+
+  <!-- MIS IDEAS DE TATUAJES -->
+ <section class="galeria">
+  <h2>"mI Galería DE TATTOOS :3"</h2>
+  <div class="grid-galeria">
+    <div class="tattoo-item">
+      <img src="img/tattoo1.jpg" alt="Tatuaje 1">
+      <p class="precio">40 €</p>
+    </div>
+    <div class="tattoo-item">
+      <img src="img/tattoo2.jpg" alt="Tatuaje 2">
+      <p class="precio">20 €</p>
+    </div>
+    <div class="tattoo-item">
+      <img src="img/tattoo3.jpg.jfif" alt="Tatuaje 3">
+      <p class="precio">25 €</p>
+    </div>
+    <div class="tattoo-item">
+      <img src="img/tattoo4.jpg" alt="Tatuaje 4">
+      <p class="precio">30 €</p>
+    </div>
+    <div class="tattoo-item">
+      <img src="img/tattoo5.jpg" alt="Tatuaje 5">
+      <p class="precio">20 €</p>
+    </div>
+  </div>
+</section>
+
+<section class="contacto">
+  <h2>Instagram</h2>
+  <p>Sígueme o escríbeme en <a href="https://www.instagram.com/florenttainttoos" target="_blank">@florenttainttoos</a></p>
+  <a href="https://www.instagram.com/direct/t/17841455563123456" target="_blank" class="boton-instagram">Mensaje en Instagram</a>
+</section>
+
+  <!-- CONTACTO WHATSAPP -->
+  <section class="whatsapp">
+    <p>¿No tenes instagram? ¡Escríbeme por WhatsApp!</p>
+
+    <label for="nombreCliente">Tu nombre:</label>
+    <input type="text" id="nombreCliente" placeholder="Escribe tu nombre" required>
+
+    <button onclick="enviarWhatsApp()" class="boton-wsp">Enviar por WhatsApp</button>
+  </section>
+
+  <!-- SCRIPT PARA WHATSAPP -->
+  <script>
+    function enviarWhatsApp() {
+      const nombre = document.getElementById('nombreCliente').value.trim();
+
+      if (nombre === "") {
+        alert("Por favor, escribe tu nombre antes de continuar.");
+        return;
+      }
+
+      const mensaje = `Hola! Mi nombre es ${nombre} y vi tu página web. Estoy interesad@ en hacerme un tatuaje o crear una nueva idea`;
+      const numero = "34611239658"; 
+      const enlace = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(enlace, "_blank");
+    }
+  </script>
+  <footer>
+  <p>© 2025 Floren.n Tattoo Studio, proximamente en el studio :p.</p>
+</footer>
+</body>
+</html>

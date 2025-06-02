@@ -1,0 +1,207 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+/* WSTILO GLOBAL PARA LOS H2 */
+h2 {
+  font-size: 32px;
+  font-family: 'UnifrakturCook', cursive;
+  color: #e63946;
+  text-align: center;
+}
+/* CABECERA */
+header {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 2px solid #e63946;
+}
+
+header h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 48px;
+  margin: 0;
+  color: #e63946;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* GALERÍA */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 40px; 
+
+}
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.grid-galeria img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 0, 80, 0.4);
+}
+
+.tattoo-item {
+  text-align: center;
+}
+
+
+.precio {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #e63946;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 60px 20px;
+  margin-top: 60px;
+  border-top: 2px solid #e63946;
+}
+
+.whatsapp p {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.whatsapp label {
+  display: block;
+  font-weight: bold;
+  color: #f0f0f0;
+  margin: 10px 0 5px;
+}
+
+.whatsapp input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.boton-wsp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-wsp:hover {
+  background-color: #1ebf5e;
+}
+/* =====================
+   DISEÑO MÓVIL
+   ===================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 36px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .tattoo-item img {
+    max-width: 90%;
+  }
+
+  .whatsapp p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .whatsapp input {
+    width: 90%;
+  }
+
+  .boton-wsp {
+    width: 90%;
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-top: 1px solid #e63946;
+  color: #aaa;
+  font-size: 14px;
+}
+.boton-instagram {
+  display: inline-block;
+  background-color: #d62976;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.boton-instagram:hover {
+  background-color: #ad1457;
+}
+
+.contacto p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contacto a {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: bold;
+}
